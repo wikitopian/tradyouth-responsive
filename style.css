@@ -8,4 +8,19 @@ Author URI: http://www.possumtech.com/
 Template: mildendo
 */
 
+div.mildendo-widget {
+	box-shadow: 5px 5px 5px #888888;
+}
 
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+	font-family: 'im_fell_english';
+	color: #000000;
+	text-shadow: 1px 1px #888888;
+	font-weight: bold;
+}
+
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+	font-family: 'im_fell_english';
+	color: #000000;
+	text-shadow: 1px 1px #888888;
+}
