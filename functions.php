@@ -10,27 +10,12 @@ class TradYouth_Responsive {
 
 	public function do_styles() {
 
-		$parent = 'mildendo';
-		$child  = 'tradyouth_responsive';
-
-		wp_enqueue_style( $parent, get_template_directory_uri() . '/style.css' );
+		wp_enqueue_style( 'mildendo', get_template_directory_uri() . '/style.css' );
 
 		wp_enqueue_style(
-			'roller',
-			get_stylesheet_directory_uri() . '/roller.css',
-			array( 'jquerymobile', $parent )
-		);
-
-		wp_enqueue_style(
-			'roller_icons',
-			get_stylesheet_directory_uri() . '/jquery.mobile.icons.min.css',
-			array( 'jquerymobile', $parent, 'roller' )
-		);
-
-		wp_enqueue_style(
-			$child,
+			'tradyouth-responsive',
 			get_stylesheet_directory_uri() . '/style.css',
-			array( 'jquerymobile', $parent, 'roller', 'roller_icons' )
+			array( 'jquerymobile', 'mildendo' )
 		);
 
 	}
