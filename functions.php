@@ -6,6 +6,7 @@ class TradYouth_Responsive {
 
 		add_action( 'wp_enqueue_scripts', array( &$this, 'do_styles' ) );
 
+		add_filter( 'user_contactmethods', array( &$this, 'add_twitter' ) );
 	}
 
 	public function do_styles() {
@@ -18,6 +19,13 @@ class TradYouth_Responsive {
 			array( 'jquerymobile', 'mildendo' )
 		);
 
+	}
+
+	public function add_twitter( $fields ) {
+
+		$fields['twitter'] = 'Twitter';
+
+		return $fields;
 	}
 
 }
