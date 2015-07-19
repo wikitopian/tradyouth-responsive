@@ -7,6 +7,8 @@ class TradYouth_Responsive {
 		add_action( 'wp_enqueue_scripts', array( &$this, 'do_styles' ) );
 
 		add_filter( 'user_contactmethods', array( &$this, 'add_twitter' ) );
+
+		add_action( 'admin_init', array( &$this, 'do_contrib_uploads' ) );
 	}
 
 	public function do_styles() {
@@ -26,6 +28,14 @@ class TradYouth_Responsive {
 		$fields['twitter'] = 'Twitter';
 
 		return $fields;
+	}
+
+	public function do_contrib_uploads() {
+
+		$contrib = get_role( 'contributor' );
+
+		$contrib->add_cap( 'upload_files' );
+
 	}
 
 }
